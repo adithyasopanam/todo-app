@@ -2,7 +2,7 @@ function add() {
   const input = document.getElementById("task");
   head = document.getElementById("head");
   head.removeAttribute("hidden");
-
+const h3 = document.querySelector("h3"); 
   const taskText = input.value.trim();
 
   if (taskText === "") return;
@@ -23,6 +23,7 @@ function add() {
   deleteBtn.onclick = () => tr.remove();
   tdAction.appendChild(deleteBtn);
 
+
   // append cells to row
   tr.appendChild(tdTask);
   tr.appendChild(tdAction);
@@ -30,5 +31,7 @@ function add() {
 
   // append row to table
   document.getElementById("list").appendChild(tr);
-
+  const table = document.getElementById("list");
+const firstDataRow = table.rows[0]; // first row after header
+firstDataRow.onclick = () =>  h3.hidden = true;
 }
