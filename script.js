@@ -22,9 +22,7 @@ function add() {
 
   deleteBtn.onclick = () => tr.remove();
   tdAction.appendChild(deleteBtn);
-if(tr===null) {
-    alert("No Tasks Added");
-  }
+
   // append cells to row
   tr.appendChild(tdTask);
   tr.appendChild(tdAction);
